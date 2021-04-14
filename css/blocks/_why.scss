@@ -1,0 +1,131 @@
+.why-section {
+    margin-top: rem(100px);
+    position: relative;
+    background: url(../img/feat/side-leafpng.png) left top 57% no-repeat;
+    
+    &::before {
+        content: url(../img/feat/bars-and-berries.png);
+        position: absolute;
+        bottom: rem(-130px);
+    }
+
+    @include tablets {
+        background: url(../img/feat/side-leafpng.png) left top 7% no-repeat;
+    }
+
+    @include phones {
+        background: none;
+    }
+}
+
+.why {
+    text-align: center;
+    padding: 0 27%;
+
+    &__title {
+        margin-bottom: rem(19px);
+    }
+
+    &__text {
+        font-size: rem(18px);
+        margin-bottom: rem(49px);
+    }
+
+    @include tablets {
+        padding: 0 20%;
+    }
+
+    @include phones {
+        padding: 0;
+    }
+}
+
+.feat {
+
+&__list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: rem(114px);
+
+    @include phones {
+        display: block;
+    }
+}
+
+&__icon-wrapper {
+    background: #F2F5F4;
+    border-radius: 50%;
+    width: rem(128px);
+    height: rem(128px);
+    display: inline-block;
+    margin-bottom: rem(20px);
+    overflow: hidden;
+    position: relative;
+
+    @include phones {
+        margin: 0 rem(12px) rem(31px) 0;
+        flex-shrink: 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+&__icon {
+    fill: black;
+    width: 65px;
+    height: 68px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);    
+}
+
+&__item {
+    width: calc(100% / 3);
+    margin: 0 -2%;
+    padding: 0 2%;
+    text-align: center;
+    position: relative;
+    font-weight: 300;
+
+    @include phones {
+        width: 100%;
+        margin: 0;
+        padding-right: rem(30px);
+        display: flex;
+    }
+
+    &::before {
+        content: url(../img/feat/separator.png);
+        position: absolute;
+        top: rem(50px);
+        right: -3%;
+        transform: translateX(50%);
+
+        @include tablets {
+            display: none;
+        }
+    }
+
+    &:last-child::before {
+        display: none;
+    }
+}
+
+&__content {
+    @include phones {
+        text-align: start;
+    }
+}
+
+&__subtitle {
+    margin-bottom: rem(18px);
+    color: #292929;
+    font-size: rem(27px);
+
+    @include phones {
+        margin-bottom: rem(14px);
+    }
+}
+}

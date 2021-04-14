@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav {
+    margin-top: rem(8px);
+
+    &__list {
+    display: flex;
+    }
+
+    &__item {
+    margin-right: rem(27px);
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    @include tablets {
+        display: none;
+    }
+}
+
+.contacts__phone {
+    position: relative;
+    color: #fff;
+
+    &--top {
+        margin-top: rem(8px);
+        padding-left: rem(20px);
+        font-size: rem(22px);
+
+        @include tablets {
+        display: none;
+        }
+        
+    }
+
+    
+}
+
+.contacts__icon--top {
+    fill: #fff;
+    width: 15px;
+    height: 15px;
+}
+

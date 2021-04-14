@@ -1,0 +1,128 @@
+html {
+    font-size: $baseFontSize;
+    height: 100%;
+
+    @include tablets {
+        font-size: $baseFontSize - 1px;
+    }
+
+    @include phones {
+        font-size: $baseFontSize - 2px;
+    }
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Alegreya Sans, sans-serif;
+    height: 100%;
+    color: #666;
+    line-height: 1.42;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    white-space: nowrap;;
+}
+
+ul, li {
+    list-style: none;
+}
+
+.wrapper {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+}
+
+.container {
+    width: 95%;
+    max-width: rem(940px);
+    overflow: hidden;
+    margin: 0 auto;
+
+    &--top {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        background: url("../img/preview/snacks.png") right center / 50% auto no-repeat;
+    }
+
+    @include tablets {
+        max-width: 38.9rem;
+            &--top {
+                background: url("../img/preview/comp-media.png") top 30% left 50% no-repeat;
+            }
+            &--form {
+                width: 26.5rem;
+            }
+    }
+
+    @include phones {
+        max-width: 25rem;
+        
+        &--top {
+            background: url("../img/preview/comp-media.png") top 30% left 50% / contain no-repeat;
+        }
+
+        &--form {
+            width: 26.5rem;
+        }
+    }
+}
+
+.section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.section__title {
+    font-size: rem(48px);
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #292929;
+    text-align: center;
+}
+
+.top-section {
+background: url(../img/preview/big-leaf.png) no-repeat right bottom #61C4D9;
+color: #fff;
+position: relative;
+
+    &::before {
+        content: url(../img/preview/leaf-one.png);
+        position: absolute;
+        bottom: rem(-50px);
+        left: rem(20px);
+    }
+
+    &::after {
+        content: url("../img/preview/comp.png");
+        position: absolute;
+        bottom: rem(-75px);
+        right: 0;
+    }
+
+    @include tablets {
+        background: url(../img/preview/big-leaf.png) no-repeat right bottom 60% #61C4D9;
+    
+        &:after, &:before {
+            display: none;
+        }
+    }
+
+    @include phones {
+        background: url(../img/preview/big-leaf.png) no-repeat right bottom 80% / 70% #61C4D9;
+    }
+}

@@ -1,0 +1,121 @@
+.feedback-section {
+    padding: 3.5rem 0;
+    background: url("../img/feedback/beers-top.png") top rem(42px) right rem(21px) no-repeat;
+    position: relative;
+
+    &::after {
+        content: url("../img/feedback/berries.png");
+        position: absolute;
+        bottom: rem(-190px);
+    }
+
+    @include tablets {
+        box-sizing: unset;
+        background: url("../img/feedback/beers-top.png") top rem(42px) right rem(-30px) no-repeat;
+    }
+
+    @include phones {
+        box-sizing: unset;
+    }
+}
+
+.feedback__title {
+    margin-bottom: 1.7rem;
+}
+
+.feedback_main {
+    background: url("../img/feedback/decor-feedback.png") top 10% right no-repeat #F8FAF9;
+    display: flex;
+    padding: 2.3rem 7.8rem 2.3rem 3.3rem;
+    margin-bottom: .8rem;
+    position: relative;
+    overflow: hidden;
+    
+
+    &::before {
+        content: "";
+        width: rem(83px);
+        height: rem(83px);
+        background: white;
+        position: absolute;
+        position: absolute;
+        border-radius: 50%;
+        left: 50%;
+        top: rem(-65px);
+        transform: translate(-50%);
+    }
+
+    @include tablets {
+        display: block;
+        text-align: center;
+        padding: 2.4rem 1.2rem 1.2rem 1.2rem;
+    }
+}
+
+.feedback__img-wrapper {
+    width: 14rem;
+    height: 14.6rem;
+    margin-right: 2.2rem;
+
+    @include tablets {
+        display: inline-block;
+        width: rem(130px);
+        height: rem(130px);
+        margin: 0 0 1.9rem 0;
+    }
+}
+
+.feedback__img {
+    height: 100%;
+}
+
+.feedback__content {
+    align-self: center;
+}
+
+.feedback__subtitle {
+    color: #292929;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: .6rem;
+}
+
+.feedback__text {
+    margin-bottom: 1.3rem;
+}
+
+.feedback__author {
+    color: #292929;
+    font-weight: 500;
+}
+
+.feedack__switcher {
+    display: flex;
+    justify-content: center;
+}
+
+.feedback__switcher-item {
+    width: 4.1rem;
+    height: 4.1rem;
+    border-radius: 50%;
+    border: rem(4px) solid transparent;
+    overflow: hidden;
+    margin-right: rem(6px);
+    
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &--active {
+        border-color: #365A49;
+    }
+}
+
+.feedback__switcher-link {
+    display: block;
+}
+
+.feedback-switcher-img {
+    width: 100%;
+}
+

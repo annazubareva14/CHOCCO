@@ -1,0 +1,156 @@
+.form-section {
+    background: url('../img/form/berrie.png') left rem(51px) bottom rem(69px) no-repeat, url(../img/form/leaf.png) right rem(10px) bottom rem(58px) no-repeat, url(../img/form/background.png);
+    color: #497870;
+
+    @include tablets {
+        background: url(../img/form/background.png);
+    }
+}
+
+.form__title {
+    color: #365A49;
+    margin-bottom: 2.66rem;
+
+    @include tablets {
+        margin-bottom: 1.8rem;
+    }
+}
+
+.form {
+    display: flex;
+
+    @include tablets {
+        display: block;
+    }    
+
+}
+
+.form__col {
+    flex: 1;
+    margin-right: 1.5rem;
+
+    &:last-child {
+        margin-right: 0;
+
+        @include tablets {
+            margin-bottom: 0;
+        }
+    }
+
+    @include tablets {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.form__row {
+    display: flex;
+    margin-bottom: 1rem;
+
+    &:last-child {
+       @include tablets {
+            margin-bottom: 0;
+        } 
+    }
+    
+}
+
+.form__block {
+    flex: 1;
+    margin-right: 1rem;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form__input {
+    width: 100%;
+    border: rem(3px) solid transparent;
+    border-radius: rem(4px);
+    padding: rem(18px) rem(11px);
+
+    &:focus {
+        border-color: #DEE2BD;
+        outline: none;
+    }
+
+    &--textarea {
+        height: rem(180px);
+        resize: none;
+
+        @include phones {
+            height: rem(82px);
+        }
+    }
+
+    @include tablets {
+        padding: rem(8px) rem(10px);
+    }
+
+    @include phones {
+        font-size: rem(14px);
+    }
+}
+
+.form__controls {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include phones {
+        justify-content: center;
+    }
+}
+
+.radio {
+    display: flex;
+    margin: 0 rem(23px) rem(20px) 0;
+    cursor: pointer;
+    user-select: none;
+
+    &:last-child {
+        margin: 0;
+    }
+
+    &--checkbox {
+        .radio__visible {
+            border-radius: rem(4px);
+
+            &::before {
+                background: url(../img/form/checkbox.svg) no-repeat center;
+            }
+        }
+    }
+}
+
+.radio__elem {
+    display: none;
+
+    &:checked ~ .radio__visible {
+        &::before {
+            display: block;
+        }
+    }
+}
+
+.radio__visible {
+    width: rem(26px);
+    height: rem(26px);
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 0.5rem;
+
+    &::before {
+        display: none;
+        position: absolute;
+        content: "";
+        background: #365A49;
+        width: rem(13px);
+        height: rem(13px);
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}

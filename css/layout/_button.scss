@@ -1,0 +1,52 @@
+.button {
+    padding: rem(21px) rem(41px);
+    background: white;
+    color: #365A49;
+    text-transform: uppercase;
+    font-weight: 800;
+    border-radius: rem(100px);
+    border: none;
+    cursor: pointer;
+    transition: .4s;
+
+    &:hover {
+        color: #497870;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+}
+
+.form__btns {
+    @include tablets {
+        text-align: center;
+    }
+}
+
+.form__btn {
+    background: #2E4E3F;
+    color: white;
+    margin: rem(47px) 0 0 rem(-10px);
+
+    &:hover {
+        background: #365A49;
+        color: white;
+    }
+
+    &--transparent {
+        color: #497870;
+        background: transparent;
+        text-transform: none;
+        font-weight: 400;
+
+        &:hover {
+            color: #000;
+        }
+    }
+
+    @include tablets {
+        margin-left: 0;
+    }
+}

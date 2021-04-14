@@ -1,0 +1,29 @@
+$z-fixed-menu: 100;
+$baseFontSize: 18px;
+
+$tablets: 768px;
+$phones: 480px;
+
+
+@import "./layout/media.scss";
+
+@import "./layout/normalize.css";
+@import "./layout/fixed-menu.scss";
+@import "./layout/base.scss";
+@import "./layout/button.scss";
+@import "./layout/hamburger.scss";
+
+
+
+
+@import "./blocks/header.scss";
+@import "./blocks/preview.scss";
+@import "./blocks/why.scss";
+@import "./blocks/feedback.scss";
+@import "./blocks/form.scss";
+@import "./blocks/advantages.scss";
+@import "./blocks/footer.scss";
+
+
+
+

@@ -1,0 +1,29 @@
+.advantages__list {
+    display: flex;
+}
+
+.advantages__item {
+    margin-right: rem(50px);
+    display: flex;
+}
+
+.advantages__item:last-child {
+    margin-right: 0;
+}
+
+.advantages__icon {
+    margin-right: rem(12px);
+    width: rem(39px);
+    height: rem(39px);
+}
+
+.advantages__text {
+    width: rem(80px);
+}
+
+
+.advantages {
+    @include tablets {
+        display: none;
+    }
+}
