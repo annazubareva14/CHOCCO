@@ -188,16 +188,19 @@ ul, li {
   outline: none;
 }
 
+.form__btns {
+  margin: 2.6111111111rem 0 0 -0.5555555556rem;
+}
 @media screen and (max-width: 768px) {
   .form__btns {
     text-align: center;
+    margin-left: 0;
   }
 }
 
 .form__btn {
   background: #2E4E3F;
   color: white;
-  margin: 2.6111111111rem 0 0 -0.5555555556rem;
 }
 .form__btn:hover {
   background: #365A49;
@@ -211,11 +214,6 @@ ul, li {
 }
 .form__btn--transparent:hover {
   color: #000;
-}
-@media screen and (max-width: 768px) {
-  .form__btn {
-    margin-left: 0;
-  }
 }
 
 .hamburger {
@@ -439,6 +437,7 @@ ul, li {
 @media screen and (max-width: 480px) {
   .feat__list {
     display: block;
+    margin-bottom: 0;
   }
 }
 .feat__icon-wrapper {
@@ -820,7 +819,6 @@ ul, li {
   display: flex;
   justify-content: space-between;
   padding: 18px 0;
-  height: 20%;
   position: absolute;
 }
 @media screen and (max-width: 480px) {
