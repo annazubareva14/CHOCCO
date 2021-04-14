@@ -20,15 +20,18 @@
 }
 
 .form__btns {
+    margin: rem(47px) 0 0 rem(-10px);
+    
     @include tablets {
         text-align: center;
+        margin-left: 0;
     }
 }
 
 .form__btn {
     background: #2E4E3F;
     color: white;
-    margin: rem(47px) 0 0 rem(-10px);
+    
 
     &:hover {
         background: #365A49;
@@ -44,9 +47,5 @@
         &:hover {
             color: #000;
         }
-    }
-
-    @include tablets {
-        margin-left: 0;
     }
 }
