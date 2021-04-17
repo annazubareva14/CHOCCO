@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/hamburger.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;800&display=swap" rel="stylesheet">
@@ -50,27 +49,27 @@
                         <a href="" class="contacts__phone-number">8 800 903 90 90</a>
                     </div>
                     <div class="overlay" id="overlay">
-                        <nav class="menu">
-                            <ul class="menu__list">
+                        <nav class="drop-menu">
+                            <ul class="drop-menu__list">
                                 <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">О нас</a>
                                 </li>
-                                <li class="menu__item">
+                                <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">Батончики</a>
                                 </li>
-                                <li class="menu__item">
+                                <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">Команда</a>
                                 </li>
-                                <li class="menu__item">
+                                <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">Меню</a>
                                 </li>
-                                <li class="menu__item">
+                                <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">Отзывы</a>
                                 </li>
-                                <li class="menu__item">
+                                <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">Как мы работаем</a>
                                 </li>
-                                <li class="menu__item">
+                                <li class="drop-menu__item">
                                     <a href="" class="drop-menu__link">Контакты </a>
                                 </li>
                             </ul>
@@ -182,8 +181,66 @@
                         </div>
                 </div> 
             </div>
-            
-
+            <div class="section offer-section">
+                <div class="offer__btn-slider-wrapper">
+                    <svg class="btn-slider">
+                        <use xlink:href="./img/offer/sprite.svg#slider-left"></use>
+                    </svg>
+                </div>
+                <div class="container">
+                    <div class="offer">
+                            <div class="offer__img-wrapper">
+                                <img src="./img/offer/snacks.png" alt="" class="offer__img">
+                            </div>
+                            <div class="offer__content">
+                                <div class="offer__composition offer__row">
+                                    <a href="#" class="composition__link">
+                                        <svg class="composition__img">
+                                            <use xlink:href="./img/offer/composition.svg#composition"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <h4 class="offer__subtitle offer__row">
+                                    Батончик “Гранола виноград”
+                                </h4>
+                                <p class="offer__description offer__row">
+                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                </p>
+                                <div class="offer__row">
+                                    <div class="offer__row__elem">
+                                        <div class="offer__row__elem__what">
+                                            Калорийность
+                                        </div>
+                                        <div class="offer__row__elem__what--br">
+                                            110 ккал
+                                        </div>
+                                    </div>
+                                    <div class="offer__row__elem">
+                                        <div class="offer__row__elem__what">
+                                            Вес
+                                        </div>
+                                        <div class="offer__row__elem__what--br">
+                                            95 грамм
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="offer__row">
+                                    <div class="offer__price offer__row__elem">
+                                        140 ₽
+                                    </div>
+                                    <div class="offer__btn button offer__row__elem">
+                                        заказать
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="offer__btn-slider-wrapper">
+                    <svg class="btn-slider">
+                        <use xlink:href="./img/offer/sprite.svg#slider-right"></use>
+                    </svg>
+                </div>
+            </div>
             <div class="section feedback-section">
                 <div class="container">
                     <h2 class="section__title feedback__title">
@@ -409,5 +466,6 @@
             <div class="hamburger__elem" class="hamburger__elem"></div>
         </div>
     </wrapper>
+    <script src="./js/hamburger.js"></script>
 </body>
 </html>

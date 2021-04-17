@@ -2,10 +2,10 @@ let hamburger  = document.querySelector('.hamburger');
 let overlay = document.querySelector('.overlay');
 let body = document.querySelector('body');
 
-let links = document.querySelectorAll('.menu__link');
+let links = document.querySelectorAll('.drop-menu__link');
 
-links.forEach(function(element){
-  element.addEventListener('click' , toggleMenu);
+links.forEach(function(e){
+  e.addEventListener('click' , toggleMenu);
 })
 
 function toggleMenu(){
