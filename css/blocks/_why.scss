@@ -7,6 +7,10 @@
         content: url(../img/feat/bars-and-berries.png);
         position: absolute;
         bottom: rem(-130px);
+
+        @include phones {
+            display: none;
+        }
     }
 
     @include tablets {

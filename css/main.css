@@ -270,7 +270,7 @@ ul, li {
 
 .drop-menu {
   text-align: center;
-  margin-top: 20%;
+  align-self: center;
 }
 .drop-menu__item {
   margin-bottom: 2%;
@@ -398,6 +398,11 @@ ul, li {
   content: url(../img/feat/bars-and-berries.png);
   position: absolute;
   bottom: -7.2222222222rem;
+}
+@media screen and (max-width: 480px) {
+  .why-section::before {
+    display: none;
+  }
 }
 @media screen and (max-width: 768px) {
   .why-section {
