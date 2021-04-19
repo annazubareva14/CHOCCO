@@ -46,6 +46,7 @@
 .drop-menu {
     text-align: center;
     align-self: center;
+    z-index: 15;
 
     &__item {
         margin-bottom: 2%;
