@@ -1,0 +1,129 @@
+.team {
+    &__title {
+        margin-bottom: 51px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+
+        @include tablets {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        width: 23%;
+
+        @include tablets {
+            width: 100%;
+            margin-bottom: 16px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__img-wrapper {
+        width: 100%;
+        
+        margin-bottom: 21px;
+        display: flex;
+
+        @include tablets {
+            order: 1;
+            height: 0;
+            width: 220px;
+            margin: 0 auto;
+            transition: .4s;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__name {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-bottom: 8px;
+        font-size: 21px;
+        font-weight: 700;
+        color: #292929;
+        position: relative;
+
+        &:focus {
+            outline: none;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 9px;
+            right: -15px;
+            margin-left: 4px;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 7px 4.5px 0 4.5px;
+            border-color: #365A49 transparent transparent transparent;
+            }
+         @include tablets {
+            margin-top: 20px;
+             order: 0;
+         }
+    }
+
+    &__content {     
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: all .4s;
+        @include tablets {
+            order: 2
+        }
+  }
+
+    &__position {
+        font-weight: 400;
+        margin-bottom: 4px;
+
+        @include tablets {
+            order: 2;
+        }
+    }
+
+    &__description {
+        font-weight: 300;
+
+        @include tablets {
+            order: 3;
+        }
+    }
+}
+
+.active {
+    .team__img-wrapper {
+        @include tablets {
+            height: 290px;
+                    
+        }
+    } 
+    .team__content {
+        max-height: 100%;
+        opacity: 1; 
+    }
+    .team__name {
+        &::after {
+            border-width: 0 4.5px 7px 4.5px;
+            border-color: transparent transparent #365A49 transparent;
+        }
+    }
+    
+}
+
+
+
+

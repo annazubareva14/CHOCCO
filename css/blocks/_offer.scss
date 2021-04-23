@@ -7,12 +7,21 @@
 }
 
 .offer {
-    display: flex;
+    .bx-wrapper {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
 
-    @include tablets {
+    
+
+    &__item {
+        display: flex;
+        @include tablets {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        }
     }
 
     &__img-wrapper {
@@ -99,9 +108,14 @@
     }
 }
 
+.offer__composition {
+    position: relative;
+}
+
 .composition__img {
     width: 91px;
     height: 91px;
+
 
     @include tablets {
         display: none;

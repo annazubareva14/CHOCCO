@@ -12,7 +12,7 @@ $phones: 480px;
 @import "./layout/base.scss";
 @import "./layout/button.scss";
 @import "./layout/hamburger.scss";
-
+@import "./layout/modal.scss";
 
 
 
@@ -20,6 +20,7 @@ $phones: 480px;
 @import "./blocks/preview.scss";
 @import "./blocks/why.scss";
 @import "./blocks/offer.scss";
+@import "./blocks/team.scss";
 @import "./blocks/feedback.scss";
 @import "./blocks/form.scss";
 @import "./blocks/advantages.scss";

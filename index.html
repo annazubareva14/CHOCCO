@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <link rel="stylesheet" href="css/main.css">
     <title>Главная</title>
 </head>
 <body>
@@ -157,60 +158,296 @@
             </div>
             <div class="section offer-section">
                 <div class="offer__btn-slider-wrapper">
-                    <svg class="btn-slider">
+                    <svg class="btn-slider btn-slider--prev">
                         <use xlink:href="./img/offer/sprite.svg#slider-left"></use>
                     </svg>
                 </div>
                 <div class="container">
                     <div class="offer">
-                            <div class="offer__img-wrapper">
-                                <img src="./img/offer/snacks.png" alt="" class="offer__img">
-                            </div>
-                            <div class="offer__content">
-                                <div class="offer__composition offer__row">
-                                    <a href="#" class="composition__link">
-                                        <svg class="composition__img">
-                                            <use xlink:href="./img/offer/composition.svg#composition"></use>
-                                        </svg>
-                                    </a>
+                        <ul class="offer__list">
+                            <li class="offer__item">
+                                <div class="offer__img-wrapper">
+                                    <img src="./img/offer/snacks.png" alt="" class="offer__img">
                                 </div>
-                                <h4 class="offer__subtitle offer__row">
-                                    Батончик “Гранола виноград”
-                                </h4>
-                                <p class="offer__description offer__row">
-                                    Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
-                                </p>
-                                <div class="offer__row">
-                                    <div class="offer__row__elem">
-                                        <div class="offer__row__elem__what">
-                                            Калорийность
+                                <div class="offer__content">
+                                    <div class="offer__composition">
+                                        <div class="offer__row">
+                                            <a href="#" class="composition__link">
+                                                <svg class="composition__img">
+                                                    <use xlink:href="./img/offer/composition.svg#composition"></use>
+                                                </svg>
+                                            </a>
                                         </div>
-                                        <div class="offer__row__elem__what--br">
-                                            110 ккал
+                                        
+                                        <div class="offer__modal-wrapper">
+                                            <div class="offer__modal">
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#grape"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Виноград
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        25 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#nut"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Грецкий орех
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        32 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#almond"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Кунжутное семя
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        20 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#washing-powder"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Сухое молоко
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        10 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#apitherapy"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Зам. сахара
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#beans"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Какао бобы
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="offer__row__elem">
-                                        <div class="offer__row__elem__what">
-                                            Вес
+                
+                                    <h4 class="offer__subtitle offer__row">
+                                        Батончик “Гранола виноград”
+                                    </h4>
+                                    <p class="offer__description offer__row">
+                                        Гранола из винограда, грецкого ореха и кунжутных семечек. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                    </p>
+                                    <div class="offer__row">
+                                        <div class="offer__row__elem">
+                                            <div class="offer__row__elem__what">
+                                                Калорийность
+                                            </div>
+                                            <div class="offer__row__elem__what--br">
+                                                110 ккал
+                                            </div>
                                         </div>
-                                        <div class="offer__row__elem__what--br">
-                                            95 грамм
+                                        <div class="offer__row__elem">
+                                            <div class="offer__row__elem__what">
+                                                Вес
+                                            </div>
+                                            <div class="offer__row__elem__what--br">
+                                                95 грамм
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="offer__row">
+                                        <div class="offer__price offer__row__elem">
+                                            140 ₽
+                                        </div>
+                                        <div class="offer__btn button offer__row__elem">
+                                            заказать
                                         </div>
                                     </div>
                                 </div>
-                                <div class="offer__row">
-                                    <div class="offer__price offer__row__elem">
-                                        140 ₽
+                            </li> 
+                            <li class="offer__item">
+                                <div class="offer__img-wrapper">
+                                    <img src="./img/offer/snacks-blue.png" alt="" class="offer__img">
+                                </div>
+                                <div class="offer__content">
+                                    <div class="offer__composition">
+                                        <div class="offer__row">
+                                            <a href="#" class="composition__link">
+                                                <svg class="composition__img">
+                                                    <use xlink:href="./img/offer/composition.svg#composition"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        
+                                        <div class="offer__modal-wrapper">
+                                            <div class="offer__modal">
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#grape"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Овёс
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        25 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#nut"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Мор. водоросли
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        15 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#almond"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Миндаль
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        20 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#washing-powder"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Сухое молоко
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        10 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#washing-powder"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Тыкв. семечки
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        20 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#apitherapy"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Зам. сахара
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                                <div class="modal__row">
+                                                    <div class="modal__img-wrapper">
+                                                        <svg class="modal__img">
+                                                            <use xlink:href="./img/offer/sprite-composition.svg#beans"></use>
+                                                        </svg>
+                                                    </div>
+                                                    <span class="modal__composition">
+                                                        Какао бобы
+                                                    </span>
+                                                    <span class="modal__weight">
+                                                        4 г
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="offer__btn button offer__row__elem">
-                                        заказать
+                
+                                    <h4 class="offer__subtitle offer__row">
+                                        Батончик “Морские водоросли”
+                                    </h4>
+                                    <p class="offer__description offer__row">
+                                        Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                    </p>
+                                    <div class="offer__row">
+                                        <div class="offer__row__elem">
+                                            <div class="offer__row__elem__what">
+                                                Калорийность
+                                            </div>
+                                            <div class="offer__row__elem__what--br">
+                                                120 ккал
+                                            </div>
+                                        </div>
+                                        <div class="offer__row__elem">
+                                            <div class="offer__row__elem__what">
+                                                Вес
+                                            </div>
+                                            <div class="offer__row__elem__what--br">
+                                                98 грамм
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="offer__row">
+                                        <div class="offer__price offer__row__elem">
+                                            140 ₽
+                                        </div>
+                                        <div class="offer__btn button offer__row__elem">
+                                            заказать
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </li> 
+                        </ul>
+                         
                     </div>
                 </div>
                 <div class="offer__btn-slider-wrapper">
-                    <svg class="btn-slider">
+                    <svg class="btn-slider btn-slider--next">
                         <use xlink:href="./img/offer/sprite.svg#slider-right"></use>
                     </svg>
                 </div>
@@ -224,17 +461,65 @@
                         <ul class="team__list">
                             <li class="team__item">
                                 <div class="team__img-wrapper">
-                                    <img src="#" alt="" class="team__img">
+                                    <img src="./img/team/boris.png" alt="" class="team__img">
                                 </div>
-                                <div class="team__content">
-                                    <h4 class="team__subtitle">
-                                        Борис Федорович
-                                    </h4>
-                                    <div class="team__position">
+                                <button class="team__name">
+                                    Борис Федорович
+                                </button>
+                                <div class="team__content">    
+                                    <h4 class="team__position">
                                         Главный технолог
-                                    </div>
+                                    </h4>
                                     <div class="team__description">
                                         Отвечает за вкусовые качества и калорийность.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__img-wrapper">
+                                    <img src="./img/team/alla.png" alt="" class="team__img">
+                                </div>
+                                <button class="team__name">
+                                    Алла Иванова
+                                </button>
+                                <div class="team__content">    
+                                    <h4 class="team__position">
+                                        Специалист по упаковке
+                                    </h4>
+                                    <div class="team__description">
+                                        Автор запоминающегося стиля наших батончиков.
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__img-wrapper">
+                                    <img src="./img/team/kirill.png" alt="" class="team__img">
+                                </div>
+                                <button class="team__name">
+                                    Кирилл Матросов
+                                </button>
+                                <div class="team__content">    
+                                    <h4 class="team__position">
+                                        Оператор
+                                    </h4>
+                                    <div class="team__description">
+                                        С радостью поможет подобрать батончики и оформить заказ. 
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="team__item">
+                                <div class="team__img-wrapper">
+                                    <img src="./img/team/mila.png" alt="" class="team__img">
+                                </div>
+                                <button class="team__name">
+                                    Мила Рыжкова
+                                </button>
+                                <div class="team__content">    
+                                    <h4 class="team__position">
+                                        PR, маркетинг
+                                    </h4>
+                                    <div class="team__description">
+                                        По всем вопросам сотрудничества и рекламы писать только Миле.
                                     </div>
                                 </div>
                             </li>
@@ -249,25 +534,59 @@
                     <h2 class="section__title feedback__title">
                         отзывы
                     </h2>
-                    <div class="feedback_main">
-                        <div class="feedback__img-wrapper">
-                            <img src="./img/feedback/alena.png" alt="alena" class="feedback__img">
-                        </div>
-                        <div class="feedback__content">
-                            <h4 class="feedback__subtitle">
-                                Лучший перекус
-                            </h4>
-                            <p class="feedback__text">
-                                Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
-                            </p>
-                            <span class="feedback__author">
-                                Алёна Хмельницкая
-                            </span>
-                        </div>
-                    </div>
+                    <ul class="feedback__list">
+                        <li class="feedback__item">
+                            <div class="feedback__img-wrapper">
+                                <img src="./img/feedback/alena.png" alt="alena" class="feedback__img">
+                            </div>
+                            <div class="feedback__content">
+                                <h4 class="feedback__subtitle">
+                                    Лучший перекус
+                                </h4>
+                                <p class="feedback__text">
+                                    Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно и удобно. 
+                                </p>
+                                <span class="feedback__author">
+                                    Алёна Хмельницкая
+                                </span>
+                            </div>    
+                        </li>
+                        <li class="feedback__item">
+                            <div class="feedback__img-wrapper">
+                                <img src="./img/feedback/vadim.png" alt="vadim" class="feedback__img">
+                            </div>
+                            <div class="feedback__content">
+                                <h4 class="feedback__subtitle">
+                                    Идеально подходят для спортсменов
+                                </h4>
+                                <p class="feedback__text">
+                                    После тренировок всегда хочется быстро закинуться чем-то белковым, потому что до дома ещё нужно доехать. А кушать хочется. Протеиновые батончики всегда выручают в этом плане. Спасибо производителю за этот качественный и экологичный продукт.  
+                                </p>
+                                <span class="feedback__author">
+                                    Вадим Грачев
+                                </span>
+                            </div>    
+                        </li>
+                        <li class="feedback__item">
+                            <div class="feedback__img-wrapper">
+                                <img src="./img/feedback/maria.png" alt="maria" class="feedback__img">
+                            </div>
+                            <div class="feedback__content">
+                                <h4 class="feedback__subtitle">
+                                    Лучшие батончики премиум уровня
+                                </h4>
+                                <p class="feedback__text">
+                                    Батончики понравились. На мой взгляд слегка завышена цена по сравнению с конкурентами, однако, как говорится – оно того стоит. Нравится носить с собой, нравится держать в руке. Ну и конечно же, кушать. Идеально утоляют голод, хоть и не надолго. Через час уже ем ещё один. Но это скорее плюс, чем минус. 
+                                </p>
+                                <span class="feedback__author">
+                                    Мария Орлова
+                                </span>
+                            </div>    
+                        </li>
+                    </ul>
                     <div class="feedback__display">
                         <ul class="feedack__switcher">
-                            <li class="feedback__switcher-item feedback__switcher-item--active">
+                            <li class="feedback__switcher-item active">
                                 <a href="#" class="feedback__switcher-link">
                                     <img src="./img/feedback/alena.png" alt="" class="feedback-switcher-img">
                                 </a>
@@ -463,12 +782,12 @@
                 </li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger">
-            <div class="hamburger__elem" class="hamburger__elem"></div>
-            <div class="hamburger__elem" class="hamburger__elem"></div>
-            <div class="hamburger__elem" class="hamburger__elem"></div>
-        </div>
     </wrapper>
+    <div class="hamburger" id="hamburger">
+        <div class="hamburger__elem" class="hamburger__elem"></div>
+        <div class="hamburger__elem" class="hamburger__elem"></div>
+        <div class="hamburger__elem" class="hamburger__elem"></div>
+    </div>
     <div class="overlay" id="overlay">
         <nav class="drop-menu">
             <ul class="drop-menu__list">
@@ -496,6 +815,13 @@
             </ul>
         </nav>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    
     <script src="./js/hamburger.js"></script>
+    <script src="./js/team.js"></script>
+    <script src="./js/feedback.js"></script>
+    <script src="./js/offer.js"></script>
+    <script src="./js/modal.js"></script>
 </body>
 </html>

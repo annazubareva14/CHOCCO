@@ -23,13 +23,23 @@
     margin-bottom: 1.7rem;
 }
 
-.feedback_main {
-    background: url("../img/feedback/decor-feedback.png") top 10% right no-repeat #F8FAF9;
-    display: flex;
-    padding: 2.3rem 7.8rem 2.3rem 3.3rem;
-    margin-bottom: .8rem;
+.feedback__list {
     position: relative;
     overflow: hidden;
+    min-height: 350px;
+}
+
+.feedback__item {
+    background: url("../img/feedback/decor-feedback.png") top 10% right no-repeat #F8FAF9;
+    display: flex;
+    padding: 2.3rem 7.8rem 2.3rem 2.3rem;
+    margin-bottom: .8rem;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     
 
     &::before {
@@ -106,7 +116,7 @@
         margin-right: 0;
     }
 
-    &--active {
+    &.active {
         border-color: #365A49;
     }
 }
@@ -119,3 +129,6 @@
     width: 100%;
 }
 
+.avtive {
+    position: static;
+}
