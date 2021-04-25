@@ -9,12 +9,16 @@
 
 })*/
 
-const swicher = document.querySelectorAll('.feedback__switcher-link');
-const swicherItem = document.querySelectorAll('.feedback__switcher-item');
+let swicherLink = document.querySelectorAll('#feedback__switcher-link');
+let swicherItem = document.querySelectorAll('#feedback__switcher-item');
 
-
-swicher.addEventListener('click', e => {
+swicherLink.forEach(function(e){
     e.preventDefault();
+    e.addEventListener('click', toggleActive);
+});
 
-    swicherItem.addClass('active');
-})
+function toggleActive(){
+    swicherItem.classList.toggle('active');
+};
+
+swicherLink.addEventListener('click', toggleActive);
