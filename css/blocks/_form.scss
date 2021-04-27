@@ -86,6 +86,10 @@
         }
     }
 
+    .input-error {
+        border-color: red;
+    }
+
     @include tablets {
         padding: rem(8px) rem(10px);
     }

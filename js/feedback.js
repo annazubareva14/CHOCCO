@@ -9,16 +9,31 @@
 
 })*/
 
-let swicherLink = document.querySelectorAll('#feedback__switcher-link');
-let swicherItem = document.querySelectorAll('#feedback__switcher-item');
 
-swicherLink.forEach(function(e){
+const swicherLink = document.querySelectorAll(".feedback__switcher-link");
+let swicherItem = document.querySelectorAll(".feedback__switcher-item");
+
+const target = $this.attr("data-open")
+
+swicherLink.forEach((link) => {
+  link.addEventListener("click", (e) => {
     e.preventDefault();
-    e.addEventListener('click', toggleActive);
+    let parent = link.parentNode;
+    parent.classList.add("active");
+    swicherItem.forEach((item) => {
+      if (item !== parent) {
+        item.classList.remove("active");
+      }
+    });
+  });
 });
 
-function toggleActive(){
-    swicherItem.classList.toggle('active');
-};
+const findBlocksByAlias = alias => {
+  return $(".feedback__item").filter((ndx, item) => {
+    return $(item).attr("data-linked-with") === alias;
+  })
+}
 
-swicherLink.addEventListener('click', toggleActive);
+const itemToShow = findBlocksByAlias(target);
+itemToShow.addClass("active").siblings().removeClass("active");
+

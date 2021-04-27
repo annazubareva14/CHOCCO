@@ -535,7 +535,7 @@
                         отзывы
                     </h2>
                     <ul class="feedback__list">
-                        <li class="feedback__item">
+                        <li class="feedback__item" data-linked-with="one">
                             <div class="feedback__img-wrapper">
                                 <img src="./img/feedback/alena.png" alt="alena" class="feedback__img">
                             </div>
@@ -551,7 +551,7 @@
                                 </span>
                             </div>    
                         </li>
-                        <li class="feedback__item">
+                        <li class="feedback__item" data-linked-with="twoo">
                             <div class="feedback__img-wrapper">
                                 <img src="./img/feedback/vadim.png" alt="vadim" class="feedback__img">
                             </div>
@@ -567,7 +567,7 @@
                                 </span>
                             </div>    
                         </li>
-                        <li class="feedback__item">
+                        <li class="feedback__item" data-linked-with="three">
                             <div class="feedback__img-wrapper">
                                 <img src="./img/feedback/maria.png" alt="maria" class="feedback__img">
                             </div>
@@ -586,18 +586,18 @@
                     </ul>
                     <div class="feedback__display">
                         <ul class="feedack__switcher">
-                            <li class="feedback__switcher-item active" id="feedback__switcher-item">
-                                <a href="#" class="feedback__switcher-link" id="feedback__switcher-link">
+                            <li class="feedback__switcher-item active" >
+                                <a href="#" class="feedback__switcher-link" data-open="one">
                                     <img src="./img/feedback/alena.png" alt="" class="feedback-switcher-img">
                                 </a>
                             </li>
-                            <li class="feedback__switcher-item" id="feedback__switcher-item">
-                                <a href="#" class="feedback__switcher-link" id="feedback__switcher-link">
+                            <li class="feedback__switcher-item" >
+                                <a href="#" class="feedback__switcher-link" data-open="two">
                                     <img src="./img/feedback/vadim.png" alt="" class="feedback-switcher-img">
                                 </a>
                             </li>
-                            <li class="feedback__switcher-item" id="feedback__switcher-item">
-                                <a href="#" class="feedback__switcher-link" id="feedback__switcher-link">
+                            <li class="feedback__switcher-item" >
+                                <a href="#" class="feedback__switcher-link" data-open="three">
                                     <img src="./img/feedback/maria.png" alt="" class="feedback-switcher-img">
                                 </a>
                             </li>
@@ -611,30 +611,31 @@
                     <h2 class="section__title form__title">закажите доставку</h2>
                     <form class="form">
                         <div class="form__col">
+                            <input type="hidden" name="to" value="https://webdev-api.loftschool.com/sendmail">
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="norm__title">Имя</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="name" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="norm__title">Телефон</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="phone" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="norm__title">Улица</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="street" class="form__input">
                                 </label>
                             </div>
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="norm__title">Дом</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="home" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="norm__title">Корпус</div>
-                                    <input type="text" class="form__input">
+                                    <input type="text" name="part" class="form__input">
                                 </label>
                                 <label class="form__block">
                                     <div class="norm__title">Квартира</div>
@@ -650,7 +651,7 @@
                             <div class="form__row">
                                 <label class="form__block">
                                     <div class="norm__title">Комментарий</div>
-                                    <textarea class="form__input form__input--textarea"></textarea>
+                                    <textarea name="comment" class="form__input form__input--textarea"></textarea>
                                 </label>
                             </div>
                             <div class="form__controls">
@@ -673,7 +674,7 @@
                                 </label>
                             </div>
                             <div class="form__btns">
-                                <button type="submit" class="button form__btn">заказать</button>
+                                <button type="submit" class="button form__btn" id="orderBtn">заказать</button>
                                 <button type="reset" class="button form__btn--transparent">Очистить</button>
                             </div>
                         </div>
@@ -815,9 +816,19 @@
             </ul>
         </nav>
     </div>
+    <div class="modal" id="modal">
+        <div class="modal__overlay" id="modal__overlay"></div>
+        <div class="modal__content">
+            <div class="modal__text">
+                Cообщение отправлено
+            </div>
+            <button class="button modal__btn" id="closeBtn">ЗАКРЫТЬ</button>
+        </div>
+    </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     
+
     <script src="./js/hamburger.js"></script>
     <script src="./js/team.js"></script>
     <script src="./js/feedback.js"></script>

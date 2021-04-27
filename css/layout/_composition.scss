@@ -1,0 +1,46 @@
+.offer__modal-wrapper {
+    position: absolute;
+    left: 92px;
+    top: 0;
+    width: 273px;
+    background: #fff;
+    opacity: .8;
+    border-radius: 4px;
+    display: none;
+}
+
+.active {
+    display: block;
+}
+
+.offer__modal {
+    padding: 30px;
+    color: #000;
+}
+
+.modal{
+    &__row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+      &:last-child {
+          margin-bottom: 0;
+      }
+    }
+
+    &__composition {
+        flex: 1;
+        flex-wrap: wrap;
+        font-weight: 500;
+    }
+
+    &__img-wrapper {
+        margin-right: 21px;
+    }
+
+    &__img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
