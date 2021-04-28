@@ -347,6 +347,20 @@ ul, li {
   align-items: center;
 }
 
+.offer__composition {
+  position: relative;
+}
+
+.composition__img {
+  width: 91px;
+  height: 91px;
+}
+@media screen and (max-width: 768px) {
+  .composition__img {
+    display: none;
+  }
+}
+
 .offer__modal-wrapper {
   position: absolute;
   left: 92px;
@@ -356,10 +370,6 @@ ul, li {
   opacity: 0.8;
   border-radius: 4px;
   display: none;
-}
-
-.active {
-  display: block;
 }
 
 .offer__modal {
@@ -386,6 +396,14 @@ ul, li {
 .modal__img {
   width: 30px;
   height: 30px;
+}
+
+.offer__composition:hover .offer__modal-wrapper {
+  display: block;
+}
+
+.offer__composition:active .offer__modal-wrapper {
+  display: block;
 }
 
 .header {
@@ -707,20 +725,6 @@ ul, li {
 @media screen and (max-width: 768px) {
   .btn-slider {
     transform: translateY(-600%);
-  }
-}
-
-.offer__composition {
-  position: relative;
-}
-
-.composition__img {
-  width: 91px;
-  height: 91px;
-}
-@media screen and (max-width: 768px) {
-  .composition__img {
-    display: none;
   }
 }
 

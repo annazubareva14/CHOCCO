@@ -108,16 +108,3 @@
     }
 }
 
-.offer__composition {
-    position: relative;
-}
-
-.composition__img {
-    width: 91px;
-    height: 91px;
-
-
-    @include tablets {
-        display: none;
-    }
-}
