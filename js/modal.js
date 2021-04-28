@@ -1,3 +1,7 @@
+const openBtn = document.querySelector("#orderBtn");
+const modal = document.querySelector('#modal');
+const closeBtn = document.querySelector('#closeBtn');
+
 const validateFields = (form, fieldsArray) => {
     fieldsArray.forEach((field) => {
         field.removeClass("input-error");
@@ -23,7 +27,7 @@ $('.form').submit(e => {
     const modal = $("#modal");
     const content = modal.find(".modal__text");
 
-    const isValid = validateFields(form, [name, form, comment, to]);
+    const isValid = validateFields(form, [name, phone, comment, to]);
 
     if (isValid) {
         $.ajax({
@@ -35,9 +39,55 @@ $('.form').submit(e => {
                 comment: comment.val(),
                 to: to.val(),
             },
+
             success: data => {
                 content.text(data.message);
                 
+                
+
+                openBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    modal.classList.toggle('modal--active');
+
+                    const overlay = document.querySelector('#modal__overlay');
+                    
+                    overlay.addEventListener("click", (e) => {
+                        if (!e.target.classList.contains("modal__content")) {
+                            modal.classList.remove('modal--active');
+                        }
+                    });
+
+                });
+
+                closeBtn.addEventListener("click", (e) => {
+                    modal.classList.remove('modal--active');
+                })
+            },
+
+            error: data => {
+                const message = data.responseJSON.message;
+                content.text(message);
+                
+
+                const modal = document.querySelector('#modal');
+
+                openBtn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    modal.classList.toggle('modal--active');
+
+                    const overlay = document.querySelector('#modal__overlay');
+                    
+                    overlay.addEventListener("click", (e) => {
+                        if (!e.target.classList.contains("modal__content")) {
+                            modal.classList.remove('modal--active');
+                        }
+                    });
+
+                });
+
+                closeBtn.addEventListener("click", (e) => {
+                    modal.classList.remove('modal--active');
+                })
             }
         })
     }
@@ -47,24 +97,3 @@ $('.form').submit(e => {
 
 
 
-const openBtn = document.querySelector("#orderBtn");
-const modal = document.querySelector('#modal');
-const closeBtn = document.querySelector('#closeBtn');
-
-openBtn.addEventListener("click", (e) => {
-    e.preventDefault();
-    modal.classList.toggle('modal--active');
-
-    const overlay = document.querySelector('#modal__overlay');
-    
-    overlay.addEventListener("click", (e) => {
-        if (!e.target.classList.contains("modal__content")) {
-            modal.classList.remove('modal--active');
-        }
-    });
-
-});
-
-closeBtn.addEventListener("click", (e) => {
-    modal.classList.remove('modal--active');
-})
