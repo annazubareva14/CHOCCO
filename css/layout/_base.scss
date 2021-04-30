@@ -36,6 +36,8 @@ ul, li {
 
 .wrapper {
     height: 100%;
+    transition: transform 1s;
+    will-change: transform;
 }
 
 .main {

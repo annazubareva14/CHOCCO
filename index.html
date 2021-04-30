@@ -527,7 +527,53 @@
                     </div>
                 </div>
             </div>
-
+            <div class="section menu-section">
+                <div class="container menu-container">
+                    <div class="menu">
+                        <div class="menu__title-wrapper">
+                            <h2 class="menu__title">
+                                Меню
+                            </h2>
+                        </div>
+                        <div class="menu__slide-tabs">
+                            <div class="menu__snacks">
+                                <ul class="snacks__list">
+                                    <li class="snacks__item snacks__item--one">
+                                        <div class="snacks__title-wrapper">
+                                            <span class="snacks__title">
+                                                Батночики с молоком
+                                            </span>
+                                        </div>
+                                        <div class="snacks__description">
+                                            Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                                        </div>
+                                    </li>
+                                    <li class="snacks__item snacks__item--two">
+                                        <div class="snacks__title-wrapper">
+                                            <span class="snacks__title">
+                                                С мёдом и фруктами
+                                            </span>
+                                        </div>
+                                        <div class="snacks__description">
+                                            Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                                        </div>
+                                    </li>
+                                    <li class="snacks__item snacks__item--three">
+                                        <div class="snacks__title-wrapper">
+                                            <span class="snacks__title">
+                                                Дикие ягоды
+                                            </span>
+                                        </div>
+                                        <div class="snacks__description">
+                                            Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="section feedback-section">
                 <div class="container">
@@ -605,7 +651,31 @@
                     </div>
                 </div>
             </div>
-
+            <div class="section player-section">
+                <div class="container">
+                    <h2 class="section__title player__title">
+                        как мы работаем
+                    </h2>
+                    <div class="player-section__container">
+                        <div class="player">
+                            <div class="player__wrapper">
+                                <div id="yt-player" class="player__elem"></div>
+                                <div class="player__splash"></div>
+                            </div>
+                            <div class="player__controls">
+                                <button class="player__start"></button>
+                                <div class="player__playback">
+                                    <button class="player__playback-btn"></button>
+                                </div>
+                                <div class="player__duration">
+                                    <span class="player__duration-completed">0:00</span> :
+                                    <span class="player__duration-estimate">0:00</span>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="section form-section">
                 <div class="container container--form">
                     <h2 class="section__title form__title">закажите доставку</h2>
@@ -734,7 +804,8 @@
                 </div>
             </div>           
         </main>
-        <nav class="fixed-menu">
+    </wrapper>
+    <nav class="fixed-menu">
             <ul class="fixed-menu__list">
                 <li class="fixed-menu__item fixed-menu__item--active">
                     <a href="" class="fixed-menu__link">
@@ -783,7 +854,6 @@
                 </li>
             </ul>
         </nav>
-    </wrapper>
     <div class="hamburger" id="hamburger">
         <div class="hamburger__elem" class="hamburger__elem"></div>
         <div class="hamburger__elem" class="hamburger__elem"></div>
@@ -833,6 +903,14 @@
     <script src="./js/team.js"></script>
     <script src="./js/feedback.js"></script>
     <script src="./js/offer.js"></script>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
+    <script src="./js/ops.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"
+    ></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="./scripts/player.js"></script>
 </body>
 </html>

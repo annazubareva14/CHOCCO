@@ -86,10 +86,6 @@
         }
     }
 
-    .input-error {
-        border-color: red;
-    }
-
     @include tablets {
         padding: rem(8px) rem(10px);
     }
@@ -97,6 +93,10 @@
     @include phones {
         font-size: rem(14px);
     }
+}
+
+.input-error {
+    border-color: red;
 }
 
 .form__controls {
