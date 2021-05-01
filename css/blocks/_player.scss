@@ -27,6 +27,20 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 17px;
+        z-index: 50;
+    }
+}
+
+.player__splash {
+    background: url(../img/player/active-btn.svg);
+    width: 75px;
+    height: 110px;
+    display: none;
+}
+
+.active {
+    .player__splash {
+        display: block;
     }
 }
 
@@ -36,6 +50,20 @@
     background: url(../img/player/play-btn.svg) center no-repeat;
     border: none;
     cursor: pointer;
+    &:active {
+        outline: none;
+    }
+}
+
+.paused {
+    width: 12px;
+    height: 16px;
+    background: url(../img/player/play-btn.svg) center no-repeat;
+    border: none;
+    cursor: pointer;
+    &:active {
+        outline: none;
+    }
 }
 
 .player__playback {
@@ -53,4 +81,7 @@
     border: none;
     top: -80%;
     cursor: pointer;
+    &:active {
+        outline: none;
+    }
 }

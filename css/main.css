@@ -1361,6 +1361,18 @@ ul, li {
   justify-content: space-between;
   align-items: center;
   padding: 0 17px;
+  z-index: 50;
+}
+
+.player__splash {
+  background: url(../img/player/active-btn.svg);
+  width: 75px;
+  height: 110px;
+  display: none;
+}
+
+.active .player__splash {
+  display: block;
 }
 
 .player__start {
@@ -1369,6 +1381,20 @@ ul, li {
   background: url(../img/player/play-btn.svg) center no-repeat;
   border: none;
   cursor: pointer;
+}
+.player__start:active {
+  outline: none;
+}
+
+.paused {
+  width: 12px;
+  height: 16px;
+  background: url(../img/player/play-btn.svg) center no-repeat;
+  border: none;
+  cursor: pointer;
+}
+.paused:active {
+  outline: none;
 }
 
 .player__playback {
@@ -1386,4 +1412,7 @@ ul, li {
   border: none;
   top: -80%;
   cursor: pointer;
+}
+.player__playback-btn:active {
+  outline: none;
 }
