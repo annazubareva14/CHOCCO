@@ -55,16 +55,7 @@
     }
 }
 
-.paused {
-    width: 12px;
-    height: 16px;
-    background: url(../img/player/play-btn.svg) center no-repeat;
-    border: none;
-    cursor: pointer;
-    &:active {
-        outline: none;
-    }
-}
+
 
 .player__playback {
     width: 445px;

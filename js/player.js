@@ -1,5 +1,5 @@
 let player;
-const playerContainer = $(".player");
+const playerContainer = $(".player__wrapper");
 
 let eventsInit = () => {
     $(".player__start").click(e => {

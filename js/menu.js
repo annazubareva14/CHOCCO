@@ -1,11 +1,12 @@
 const tabs = document.querySelectorAll('.snacks__title');
+let description = document.querySelectorAll('.snacks__description')
 
 tabs.forEach(item => {
     item.addEventListener('click', function (event) {
         const target = event.target;
 
         document.querySelectorAll('.snacks__description').forEach(el => {
-            if (el.parentElement.querySelector('.snacks__title').textContent !== target.textContent) {
+            if (el.parentElement.querySelectorAll('.snacks__title').textContent !== target.textContent) {
                 el.classList.remove('snacks__description--active');
             }
         });
@@ -16,10 +17,12 @@ tabs.forEach(item => {
     });
 })  
 
-function fillActiveElement(el) {
+console.log(activeElement);
 
-    el.classList.contains('snacks__description--active') ?
-        el.classList.remove('snacks__description--active')
-        : el.classList.add('snacks__description--active')
+function fillActiveElement(activeElement) {
+
+    activeElement.classList.contains('.snacks__description--active') ?
+    activeElement.classList.remove('.snacks__description--active')
+        : activeElement.classList.add('.snacks__description--active')
 
 }    

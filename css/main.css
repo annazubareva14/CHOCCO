@@ -1264,13 +1264,7 @@ ul, li {
   }
 }
 
-.footer__map {
-  overflow: hidden;
-  height: 100%;
-}
-
-.map__img {
-  width: 100%;
+.map {
   height: 100%;
 }
 
@@ -1383,17 +1377,6 @@ ul, li {
   cursor: pointer;
 }
 .player__start:active {
-  outline: none;
-}
-
-.paused {
-  width: 12px;
-  height: 16px;
-  background: url(../img/player/play-btn.svg) center no-repeat;
-  border: none;
-  cursor: pointer;
-}
-.paused:active {
   outline: none;
 }
 
