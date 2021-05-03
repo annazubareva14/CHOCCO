@@ -40,7 +40,8 @@
     left: 0;
     right: 0;
     bottom: 0;
-    
+    opacity: 0;
+    transition: .4s;
 
     &::before {
         content: "";
@@ -53,6 +54,10 @@
         left: 50%;
         top: rem(-65px);
         transform: translate(-50%);
+    }
+
+    &.active {
+        opacity: 1;;
     }
 
     @include tablets {

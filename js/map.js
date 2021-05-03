@@ -1,3 +1,4 @@
+let myMap;
 const init = () => {
     myMap = new ymaps.Map("map", {
       center: [59.935274, 30.312388],
@@ -15,7 +16,7 @@ const init = () => {
     const myCollection = new ymaps.GeoObjectCollection({}, {
       draggable: false,
       iconLayout: 'default#image',
-      iconImageHref: '/img/map/marker.svg',
+      iconImageHref: './img/map/marker.svg',
       iconImageSize: [46, 57],
       iconImageOffset: [-35, -52]
     });
@@ -25,4 +26,7 @@ const init = () => {
     })
     
     myMap.geoObjects.add(myCollection);
-   };
+};
+
+
+ymaps.ready(init);
