@@ -1,24 +1,42 @@
-const sections = $("section");
+const sections = $(".section");
 const display = $(".wrapper");
 
 let inScroll = false;
 
-sections.first().addClass("active");
+sections.first().addClass("activeNow");
 
-const performTransition = sectionEq => {
+const performTransition = (sectionEq) => {
 
-    if(inScroll ===false) {
+    if(inScroll === false) {
         inScroll = true;
         const position = sectionEq * -100;
 
+        const currentSection = sections.eq(sectionEq);
+        const menuTheme = currentSection.attr("data-sidemenu-theme");
+        const sideMenu = $(".fixed-menu");
+
+        if(menuTheme === "white") {
+            sideMenu.addClass("fixed-menu--white");
+        } else {
+            sideMenu.removeClass("fixed-menu--white")
+        }
+
         display.css({
-            transform: 'translateY(${position}%)'
+            transform: `translateY(${position}%)`
         });
 
-        sections.eq(sectionEq).addClass("active").siblings.removeClass("active");
+        sections.eq(sectionEq).addClass("activeNow").siblings().removeClass("activeNow");
+
+
 
         setTimeout(() => {
             inScroll = false;
+
+            sideMenu
+            .find(".fixed-menu__item")
+            .eq(sectionEq).addClass("fixed-menu__item--active")
+            .siblings()
+            .removeClass("fixed-menu__item--active");
 
         }, 1300)
     };
@@ -26,8 +44,8 @@ const performTransition = sectionEq => {
     
 }
 
-const scrollViewport = direction => {
-    const activeSection = sections.filter(".active");
+const scrollViewport = (direction) => {
+    const activeSection = sections.filter(".activeNow");
     const nextSection = activeSection.next();
     const prevSection = activeSection.prev();
 
@@ -66,9 +84,16 @@ $(window).on("keydown", e => {
                 scrollViewport("next");
                 break;
 
-    }
-
-    
-
+         }
     }
 })
+
+$("[data-scroll-to]").click(e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-scroll-to");
+    const reqSection = $(`[data-section-id=${target}]`);
+
+    performTransition(reqSection.index());
+});

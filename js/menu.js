@@ -1,32 +1,27 @@
-const tabs = document.querySelectorAll('.snacks__title');
-let description = document.querySelectorAll('.snacks__description');
+const tabs = document.querySelectorAll(".snacks__item");
+
+tabs.forEach((item) => {
+  item.addEventListener("click", function (event) {
+    //   li
+    let target = event.currentTarget;
+    // description
+    let description = target.querySelector(".snacks__description");
 
 
-tabs.forEach(item => {
-    item.addEventListener('click', function (event) {
-        const target = event.currentTarget;
-
-
-        description.forEach(el => {
-            if (el.parentElement.querySelectorAll('.snacks__title').textContent !== target.textContent) {
-                el.classList.remove('snacks__description--active');
-            }
-        });
-
-        //const activeElement = target.parentElement.querySelector('.snacks__description');
-
-        fillActiveElement();
-    });
-    
-})  
-
-function fillActiveElement() {
-
-    description.forEach((item) => {
-    if (item.classList.contains('snacks__description--active')) {
-        item.classList.remove('snacks__description--active');
-    } else {item.classList.add('snacks__description--active');}
+    if (description.classList.contains("snacks__description--active")) {
+      description.classList.remove("snacks__description--active");
+    } else {
+      description.classList.add("snacks__description--active");
     }
-    )};
+
+    tabs.forEach((li) => {
+      if (li !== target) {
+        let content = li.querySelector(".snacks__description");
+        content.classList.remove("snacks__description--active");
+      }
+    });
+  });
+});
+
 
     

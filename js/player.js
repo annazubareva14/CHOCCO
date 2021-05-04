@@ -1,5 +1,5 @@
 let player;
-const playerContainer = $(".player__wrapper");
+const playerContainer = $(".player");
 
 let eventsInit = () => {
     $(".player__start").click(e => {
@@ -30,7 +30,21 @@ let eventsInit = () => {
        $(".player__splash").click(e => {
         player.playVideo();
       })
-     
+
+
+    $(".player__volume").click(e => {
+      const barVolume = $(e.currentTarget);
+      const positionVolume = e.originalEvent.layerX;
+
+      const newVolumeBtnPositionPercent = (positionVolume / barVolume.width()) * 100;
+      const newVolumePosition = (player.getVolume() / 100) * newVolumeBtnPositionPercent;
+
+      $(".player__volume-btn").css({
+        left: `${newVolumeBtnPositionPercent}%`
+      });
+
+      player.seekTo(newVolumePosition);
+    });    
 
 };
  
@@ -71,6 +85,7 @@ const onPlayerReady = () => {
 
 };
 
+    
 
 const onPlayerStateChange = event => {
     /*

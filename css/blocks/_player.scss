@@ -8,7 +8,7 @@
 }
 
 .player {
-    
+    position: relative;
     width: 662px;
     height: 392px;
 
@@ -27,7 +27,8 @@
         justify-content: space-between;
         align-items: center;
         padding: 0 17px;
-        z-index: 50;
+        position: absolute;
+        width: 100%;
     }
 }
 
@@ -58,21 +59,51 @@
 
 
 .player__playback {
-    width: 445px;
+    width: 400px;
     height: 4px;
     background: #626262;
     position: relative;
+    margin-right: 20px;
 }
 
 .player__playback-btn {
     width: 15px;
     height: 15px;
     position: absolute;
-    background: url(../../img/player/playback-btn.svg) no-repeat;
+    background: url(../img/player/playback-btn.svg) no-repeat;
     border: none;
     top: -80%;
     cursor: pointer;
     &:active {
         outline: none;
+    }
+}
+
+.player__volume {
+    width: 60px;
+    height: 4px;
+    background: #626262;
+    position: relative;
+
+    &::before {
+        content: url(../img/player/volume.svg);
+        height: 16px;
+        width: 13px;
+        position: absolute;
+        left: -20px;
+        top: -7px;
+    }
+
+    &-btn {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        background: url(../img/player/playback-btn.svg) no-repeat;
+        border: none;
+        top: -80%;
+        cursor: pointer;
+        &:active {
+            outline: none;
+        }
     }
 }
