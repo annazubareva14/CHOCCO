@@ -52,10 +52,12 @@ let eventsInit = () => {
         left: `${newVolumeBtnPositionPercent}%`
       });
 
-      player.seekTo(newVolumePosition);
+      player.setVolume(newVolumePosition);
     });    
 
 };
+
+eventsInit();
  
 const formatTime = timeSec => {
     const roundTime = Math.round(timeSec);

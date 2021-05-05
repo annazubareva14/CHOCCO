@@ -5,7 +5,6 @@ let body = document.querySelector('body');
 let links = document.querySelectorAll('.drop-menu__link');
 
 links.forEach(function(e){
-  e.preventDefault;
   e.addEventListener('click' , toggleMenu);
 })
 
