@@ -1,5 +1,4 @@
 .feedback-section {
-    padding: 3.5rem 0;
     background: url("../img/feedback/beers-top.png") top rem(42px) right rem(21px) no-repeat;
     position: relative;
 
@@ -7,6 +6,7 @@
         content: url("../img/feedback/berries.png");
         position: absolute;
         bottom: rem(-190px);
+        z-index: 5;
     }
 
     @include tablets {

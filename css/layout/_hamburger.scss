@@ -23,6 +23,12 @@
         }
     }
 
+    &--blue {
+      .hamburger__elem {
+        background: #3372a6;
+      }
+    }
+
     @include tablets {
         display: block;
     }

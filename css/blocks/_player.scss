@@ -1,5 +1,15 @@
 .player-section {
-    background: #F8FAF9;
+    background: url(../img/player/leaf-top.png) no-repeat right 10% top 10%, 
+    url(../img/player/leaf-bottom.png) no-repeat left 11% bottom 5%,
+    #F8FAF9;
+    position: relative;
+
+    &::after {
+        content: url(../img/player/leaf-and-beeren.png);
+        bottom: -15%;
+        right: 0;
+        position: absolute;
+    }
 }
 
 .player-section__container {
@@ -11,6 +21,7 @@
     position: relative;
     width: 662px;
     height: 392px;
+    z-index: 10;
 
     &__title {
         margin-bottom: 30px;
@@ -63,7 +74,6 @@
     height: 4px;
     background: #626262;
     position: relative;
-    margin-right: 20px;
 }
 
 .player__playback-btn {
@@ -80,19 +90,27 @@
 }
 
 .player__volume {
+    display: flex;
+    align-items: center;
+}
+
+.volume__mute {
+    background: url(../img/player/volume.svg);
+    border: none;
+    height: 16px;
+    width: 13px;
+    margin-right: 10px;
+    cursor: pointer;
+    &:active {
+        outline: none;
+    }
+}
+
+.volume__bar {
     width: 60px;
     height: 4px;
     background: #626262;
     position: relative;
-
-    &::before {
-        content: url(../img/player/volume.svg);
-        height: 16px;
-        width: 13px;
-        position: absolute;
-        left: -20px;
-        top: -7px;
-    }
 
     &-btn {
         width: 15px;

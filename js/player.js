@@ -27,19 +27,28 @@ let eventsInit = () => {
         player.seekTo(newPlaybackPositionSec);
        });
 
-       $(".player__splash").click(e => {
-        player.playVideo();
-      })
+    $(".player__splash").click(e => {
+      player.playVideo();
+    });
+    
+    $(".volume__mute").click(e => {
+      e.preventDefault();
 
+      if (player.getVolume() == 0) {
+        player.setVolume('100');
+      } else {
+        player.setVolume('0');
+      }
+    });
 
-    $(".player__volume").click(e => {
+    $(".volume__bar").click(e => {
       const barVolume = $(e.currentTarget);
       const positionVolume = e.originalEvent.layerX;
 
       const newVolumeBtnPositionPercent = (positionVolume / barVolume.width()) * 100;
       const newVolumePosition = (player.getVolume() / 100) * newVolumeBtnPositionPercent;
 
-      $(".player__volume-btn").css({
+      $(".volume__bar-btn").css({
         left: `${newVolumeBtnPositionPercent}%`
       });
 
@@ -84,8 +93,6 @@ const onPlayerReady = () => {
     }, 1000);
 
 };
-
-    
 
 const onPlayerStateChange = event => {
     /*

@@ -531,8 +531,8 @@
                                 Меню
                             </h2>
                                 <ul class="snacks__list">
-                                    <li class="snacks__item snacks__item--one">
-                                        <div class="snacks__title-wrapper">
+                                    <li class="snacks__item">
+                                        <div class="snacks__title-wrapper snacks__title-wrapper--one">
                                             <span class="snacks__title">
                                                 Батночики с молоком
                                             </span>
@@ -541,8 +541,8 @@
                                             Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
                                         </div>
                                     </li>
-                                    <li class="snacks__item snacks__item--two">
-                                        <div class="snacks__title-wrapper">
+                                    <li class="snacks__item">
+                                        <div class="snacks__title-wrapper snacks__title-wrapper--two">
                                             <span class="snacks__title">
                                                 С мёдом и фруктами
                                             </span>
@@ -551,8 +551,8 @@
                                             Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
                                         </div>
                                     </li>
-                                    <li class="snacks__item snacks__item--three">
-                                        <div class="snacks__title-wrapper">
+                                    <li class="snacks__item">
+                                        <div class="snacks__title-wrapper snacks__title-wrapper--three">
                                             <span class="snacks__title">
                                                 Дикие ягоды
                                             </span>
@@ -657,10 +657,13 @@
                                     <button class="player__playback-btn"></button>
                                 </div>
                                 <div class="player__volume">
-                                    <button class="player__volume-btn"></button>
+                                    <button class="volume__mute"></button>
+                                    <div class="volume__bar">
+                                        <button class="volume__bar-btn"></button>
+                                    </div> 
                                 </div>
                                 <div class="player__duration">
-                                    <span class="player__duration-completed">0:00</span> :
+                                    <span class="player__duration-completed">0:00</span> /
                                     <span class="player__duration-estimate">0:00</span>
                                 </div>
                               </div>
@@ -798,7 +801,7 @@
     </div>
     <nav class="fixed-menu">
             <ul class="fixed-menu__list">
-                <li class="fixed-menu__item fixed-menu__item--active">
+                <li class="fixed-menu__item">
                     <a href="" class="fixed-menu__link" data-scroll-to="top-section"></a>
                 </li>
                 <li class="fixed-menu__item">
@@ -836,25 +839,25 @@
         <nav class="drop-menu">
             <ul class="drop-menu__list">
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">О нас</a>
+                    <a href="" data-scroll-to="top-section" class="drop-menu__link">О нас</a>
                 </li>
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">Батончики</a>
+                    <a href="" data-scroll-to="offer-section" class="drop-menu__link">Батончики</a>
                 </li>
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">Команда</a>
+                    <a href="" data-scroll-to="team-section" class="drop-menu__link">Команда</a>
                 </li>
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">Меню</a>
+                    <a href="" data-scroll-to="menu-section" class="drop-menu__link">Меню</a>
                 </li>
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">Отзывы</a>
+                    <a href="" data-scroll-to="feedback-section" class="drop-menu__link">Отзывы</a>
                 </li>
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">Как мы работаем</a>
+                    <a href="" data-scroll-to="player-section" class="drop-menu__link">Как мы работаем</a>
                 </li>
                 <li class="drop-menu__item">
-                    <a href="" class="drop-menu__link">Контакты </a>
+                    <a href="" data-scroll-to="map-section" class="drop-menu__link">Контакты </a>
                 </li>
             </ul>
         </nav>

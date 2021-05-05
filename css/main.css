@@ -123,6 +123,7 @@ ul, li {
   }
   .container--form {
     width: 26.5rem;
+    z-index: 10;
   }
 }
 @media screen and (max-width: 480px) {
@@ -268,6 +269,9 @@ ul, li {
 }
 .hamburger__elem:last-child {
   margin-bottom: 0;
+}
+.hamburger--blue .hamburger__elem {
+  background: #3372a6;
 }
 @media screen and (max-width: 768px) {
   .hamburger {
@@ -815,7 +819,6 @@ ul, li {
   }
 }
 .team__content {
-  max-height: 0;
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s;
@@ -858,7 +861,6 @@ ul, li {
 }
 
 .feedback-section {
-  padding: 3.5rem 0;
   background: url("../img/feedback/beers-top.png") top 2.3333333333rem right 1.1666666667rem no-repeat;
   position: relative;
 }
@@ -866,6 +868,7 @@ ul, li {
   content: url("../img/feedback/berries.png");
   position: absolute;
   bottom: -10.5555555556rem;
+  z-index: 5;
 }
 @media screen and (max-width: 768px) {
   .feedback-section {
@@ -1185,6 +1188,13 @@ ul, li {
 .menu-section {
   background: #98b3af;
   position: relative;
+  color: #fff;
+}
+.menu-section::after {
+  content: url(../img/menu/Himbeere.png);
+  position: absolute;
+  left: 5%;
+  top: -7%;
 }
 
 .menu {
@@ -1202,7 +1212,6 @@ ul, li {
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
-  color: #fff;
   position: absolute;
   top: 109px;
   left: 12%;
@@ -1210,6 +1219,11 @@ ul, li {
 @media screen and (max-width: 768px) {
   .menu__title {
     left: 5%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .menu__title {
+    font-size: 40px;
   }
 }
 
@@ -1223,23 +1237,27 @@ ul, li {
   cursor: pointer;
   display: flex;
 }
-.snacks__item--one {
-  background: #ace3ec;
-}
-.snacks__item--two {
-  background: #7199b9;
-}
-.snacks__item--three {
-  background: #5486a7;
-}
 .snacks__title-wrapper {
   position: relative;
   width: 102px;
   height: 100%;
 }
+.snacks__title-wrapper--one {
+  background: #ace3ec;
+}
+.snacks__title-wrapper--two {
+  background: #7199b9;
+}
+.snacks__title-wrapper--three {
+  background: #5486a7;
+}
+@media screen and (max-width: 480px) {
+  .snacks__title-wrapper {
+    width: 90px;
+  }
+}
 .snacks__title {
-  color: #fff;
-  font-size: 36px;
+  font-size: 48px;
   font-weight: 700;
   position: absolute;
   bottom: 0;
@@ -1249,6 +1267,11 @@ ul, li {
   white-space: nowrap;
   transform-origin: 0 0;
 }
+@media screen and (max-width: 480px) {
+  .snacks__title {
+    font-size: 40px;
+  }
+}
 .snacks__description {
   background: #333537e6;
   max-width: 0;
@@ -1257,11 +1280,21 @@ ul, li {
 }
 .snacks__description--active {
   max-width: 524px;
-  opacity: 1;
+  opacity: 0.9;
+  padding: 30px 80px 30px 40px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
 }
 @media screen and (max-width: 768px) {
   .snacks__description--active {
     max-width: calc(100% - 102px);
+    padding: 38px 53px 38px 38px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .snacks__description--active {
+    padding: 35px;
   }
 }
 
@@ -1345,7 +1378,14 @@ ul, li {
 }
 
 .player-section {
-  background: #F8FAF9;
+  background: url(../img/player/leaf-top.png) no-repeat right 10% top 10%, url(../img/player/leaf-bottom.png) no-repeat left 11% bottom 5%, #F8FAF9;
+  position: relative;
+}
+.player-section::after {
+  content: url(../img/player/leaf-and-beeren.png);
+  bottom: -15%;
+  right: 0;
+  position: absolute;
 }
 
 .player-section__container {
@@ -1357,6 +1397,7 @@ ul, li {
   position: relative;
   width: 662px;
   height: 392px;
+  z-index: 10;
 }
 .player__title {
   margin-bottom: 30px;
@@ -1402,7 +1443,6 @@ ul, li {
   height: 4px;
   background: #626262;
   position: relative;
-  margin-right: 20px;
 }
 
 .player__playback-btn {
@@ -1419,20 +1459,29 @@ ul, li {
 }
 
 .player__volume {
+  display: flex;
+  align-items: center;
+}
+
+.volume__mute {
+  background: url(../img/player/volume.svg);
+  border: none;
+  height: 16px;
+  width: 13px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.volume__mute:active {
+  outline: none;
+}
+
+.volume__bar {
   width: 60px;
   height: 4px;
   background: #626262;
   position: relative;
 }
-.player__volume::before {
-  content: url(../img/player/volume.svg);
-  height: 16px;
-  width: 13px;
-  position: absolute;
-  left: -20px;
-  top: -7px;
-}
-.player__volume-btn {
+.volume__bar-btn {
   width: 15px;
   height: 15px;
   position: absolute;
@@ -1441,6 +1490,6 @@ ul, li {
   top: -80%;
   cursor: pointer;
 }
-.player__volume-btn:active {
+.volume__bar-btn:active {
   outline: none;
 }

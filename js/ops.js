@@ -14,11 +14,14 @@ const performTransition = (sectionEq) => {
         const currentSection = sections.eq(sectionEq);
         const menuTheme = currentSection.attr("data-sidemenu-theme");
         const sideMenu = $(".fixed-menu");
+        const hamburgerTheme = $(".hamburger");
 
         if(menuTheme === "white") {
             sideMenu.addClass("fixed-menu--white");
+            hamburgerTheme.removeClass("hamburger--blue");
         } else {
-            sideMenu.removeClass("fixed-menu--white")
+            sideMenu.removeClass("fixed-menu--white");
+            hamburgerTheme.addClass("hamburger--blue");
         }
 
         display.css({

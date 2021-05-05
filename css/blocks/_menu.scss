@@ -1,6 +1,14 @@
 .menu-section {
     background: #98b3af;
     position: relative;
+    color: #fff;
+
+    &::after {
+        content: url(../img/menu/Himbeere.png);
+        position: absolute;
+        left: 5%;
+        top: -7%;
+    }
   }
 
 .menu {
@@ -19,13 +27,16 @@
         font-weight: 700;
         font-size: 48px;
         text-transform: uppercase;
-        color: #fff;
         position: absolute;
         top: 109px;
         left: 12%;
 
         @include tablets {
             left: 5%;
+        }
+
+        @include phones {
+            font-size: 40px;
         }
     }
 }
@@ -41,7 +52,12 @@
         height: 100%;
         cursor: pointer;
         display: flex;
+    }
 
+    &__title-wrapper {
+        position: relative;
+        width: 102px;
+        height: 100%;
         &--one {
             background: #ace3ec;
         }
@@ -53,17 +69,14 @@
         &--three {
             background: #5486a7;
         }
-    }
 
-    &__title-wrapper {
-        position: relative;
-        width: 102px;
-        height: 100%;
+        @include phones {
+            width: 90px;
+        }
     }
 
     &__title {
-        color: #fff;
-        font-size: 36px;
+        font-size: 48px;
         font-weight: 700;
         position: absolute;
         bottom: 0;
@@ -72,6 +85,10 @@
         transform: rotateZ(-90deg);
         white-space: nowrap;
         transform-origin: 0 0;
+
+        @include phones {
+            font-size: 40px;
+        }
     }
 
     &__description {
@@ -82,10 +99,19 @@
 
         &--active {
             max-width: 524px;
-            opacity: 1;
+            opacity: .9;
+            padding: 30px 80px 30px 40px;
+            font-size: 16px;
+            line-height: 1.6;
+            font-weight: 400;
 
             @include tablets {
                 max-width: calc(100% - 102px);
+                padding: 38px 53px 38px 38px;
+            }
+
+            @include phones {
+                padding: 35px;
             }
         }
     }
