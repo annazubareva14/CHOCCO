@@ -1298,26 +1298,32 @@ ul, li {
   }
 }
 
-.container--footer {
-  display: flex;
-  justify-content: space-between;
-  padding: 18px 0;
-  position: absolute;
-}
-@media screen and (max-width: 480px) {
-  .container--footer {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
+.bottom-section {
+  position: relative;
 }
 
 .map {
   height: 100%;
 }
 
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0;
+}
+@media screen and (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .footer {
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: #fff;
 }
 .footer__contacts-all {
   font-size: 21px;

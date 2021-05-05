@@ -1,8 +1,15 @@
-.container--footer {
+.bottom-section {
+    position: relative;
+}
+
+.map {
+    height: 100%;  
+}
+
+.footer-container {
     display: flex;
     justify-content: space-between;
     padding: 18px 0;
-    position: absolute;
 
     @include phones {
         flex-direction: column;
@@ -10,14 +17,13 @@
         justify-content: center;
     }
 }
-
-.map {
-    height: 100%;  
-}
-
     
 .footer {
-    position: relative;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #fff;
+    
 
     &__contacts-all {
         font-size: 21px;
