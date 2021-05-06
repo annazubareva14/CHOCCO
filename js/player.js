@@ -36,8 +36,14 @@ let eventsInit = () => {
 
       if (player.getVolume() == 0) {
         player.setVolume('100');
+        $(".volume__bar-btn").css({
+          left: `${100}%`
+        });
       } else {
         player.setVolume('0');
+        $(".volume__bar-btn").css({
+          left: `${0}%`
+        });
       }
     });
 

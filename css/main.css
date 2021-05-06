@@ -15,9 +15,6 @@
 .fixed-menu__item--active .fixed-menu__link {
   border-color: #3372a6;
 }
-.fixed-menu__item--white .fixed-menu__link {
-  border-color: #fff;
-}
 
 .fixed-menu__link {
   width: 0.8888888889rem;
@@ -47,6 +44,10 @@
 }
 .fixed-menu--white .fixed-menu__link::before {
   background: #fff;
+}
+
+.fixed-menu--white > .fixed-menu__item--active .fixed-menu__link {
+  border-color: #fff;
 }
 
 html {
@@ -651,6 +652,15 @@ ul, li {
   flex-direction: initial;
   align-items: center;
   padding: 0 5%;
+  position: relative;
+  z-index: -5;
+}
+.offer-section::after {
+  content: url(../img/offer/deco.png);
+  position: absolute;
+  right: 0;
+  bottom: -30%;
+  z-index: -5;
 }
 
 .offer .bx-wrapper {
@@ -682,6 +692,7 @@ ul, li {
 }
 .offer__content {
   width: 50%;
+  z-index: 5;
 }
 @media screen and (max-width: 768px) {
   .offer__content {
@@ -1132,7 +1143,8 @@ ul, li {
   display: none;
 }
 .radio__elem:checked ~ .radio__visible::before {
-  display: block;
+  width: 0.7222222222rem;
+  height: 0.7222222222rem;
 }
 
 .radio__visible {
@@ -1144,16 +1156,16 @@ ul, li {
   margin-right: 0.5rem;
 }
 .radio__visible::before {
-  display: none;
   position: absolute;
   content: "";
   background: #365A49;
-  width: 0.7222222222rem;
-  height: 0.7222222222rem;
+  width: 0;
+  height: 0;
   border-radius: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.2s;
 }
 
 .advantages__list {
@@ -1186,7 +1198,7 @@ ul, li {
 }
 
 .menu-section {
-  background: #98b3af;
+  background: #000;
   position: relative;
   color: #fff;
 }
@@ -1201,12 +1213,7 @@ ul, li {
   display: flex;
   height: 100%;
   justify-content: flex-end;
-}
-
-.menu {
-  display: flex;
-  height: 100%;
-  justify-content: flex-end;
+  background: url(../img/menu/Slide.png) center/cover no-repeat;
 }
 .menu__title {
   font-weight: 700;
@@ -1243,13 +1250,13 @@ ul, li {
   height: 100%;
 }
 .snacks__title-wrapper--one {
-  background: #ace3ec;
+  background: url(../img/menu/one.png) center/cover no-repeat;
 }
 .snacks__title-wrapper--two {
-  background: #7199b9;
+  background: url(../img/menu/two.png) center/cover no-repeat;
 }
 .snacks__title-wrapper--three {
-  background: #5486a7;
+  background: url(../img/menu/three.png) center/cover no-repeat;
 }
 @media screen and (max-width: 480px) {
   .snacks__title-wrapper {
@@ -1275,7 +1282,6 @@ ul, li {
 .snacks__description {
   background: #333537e6;
   max-width: 0;
-  opacity: 0;
   transition: all 0.4s ease-in-out;
 }
 .snacks__description--active {

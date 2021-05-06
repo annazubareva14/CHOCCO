@@ -134,7 +134,8 @@
 
     &:checked ~ .radio__visible {
         &::before {
-            display: block;
+            width: rem(13px);
+            height: rem(13px);
         }
     }
 }
@@ -148,15 +149,15 @@
     margin-right: 0.5rem;
 
     &::before {
-        display: none;
         position: absolute;
         content: "";
         background: #365A49;
-        width: rem(13px);
-        height: rem(13px);
+        width: 0;
+        height: 0;
         border-radius: 50%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transition: .2s;
     }
 }

@@ -18,11 +18,6 @@
         }
     }
 
-    &--white {
-        .fixed-menu__link {
-            border-color: #fff;
-        }
-    }
 }
 
 .fixed-menu__link {
@@ -47,14 +42,20 @@
     }
 }
 
+
 @media (max-width: 768px) {
     .fixed-menu { display: none;}
 }
 
 .fixed-menu--white { 
-    
     .fixed-menu__link::before {
         background: #fff;
     }
+}
 
+
+.fixed-menu--white > .fixed-menu__item--active {
+    .fixed-menu__link {
+        border-color: #fff;
+    }
 }
