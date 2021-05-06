@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import "./layout/normalize.css";
 .fixed-menu {
   position: fixed;
@@ -46,7 +47,7 @@
   background: #fff;
 }
 
-.fixed-menu--white > .fixed-menu__item--active .fixed-menu__link {
+.fixed-menu__item--whiteпше ~ .fixed-menu__item--active .fixed-menu__link {
   border-color: #fff;
 }
 

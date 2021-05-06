@@ -14,13 +14,16 @@ const performTransition = (sectionEq) => {
         const currentSection = sections.eq(sectionEq);
         const menuTheme = currentSection.attr("data-sidemenu-theme");
         const sideMenu = $(".fixed-menu");
+        const sideMenuItem = $(".fixed-menu__item");
         const hamburgerTheme = $(".hamburger");
 
         if(menuTheme === "white") {
             sideMenu.addClass("fixed-menu--white");
+            sideMenuItem.addClass("fixed-menu__item--white");
             hamburgerTheme.removeClass("hamburger--blue");
         } else {
             sideMenu.removeClass("fixed-menu--white");
+            sideMenuItem.removeClass("fixed-menu__item--white");
             hamburgerTheme.addClass("hamburger--blue");
         }
 
