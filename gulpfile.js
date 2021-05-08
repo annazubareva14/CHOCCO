@@ -33,7 +33,7 @@ task('copy:html', () => {
 task('styles', () => {
  return src([...STYLE_LIBS, 'src/styles/main.css'])
    .pipe(gulpif(env === 'dev', sourcemaps.init()))
-   .pipe(concat('main.min.scss'))
+   .pipe(concat('main.min.css'))
    .pipe(px2rem())
    .pipe(gulpif(env === 'prod', autoprefixer({
        browsers: ['last 2 versions'],
